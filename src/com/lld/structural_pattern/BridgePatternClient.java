@@ -1,5 +1,30 @@
 package com.lld.structural_pattern;
 
+//Divides and orgainizes a single class that has 
+//mutiple variates of some functionality into two hierarchies: 
+
+//ABSTRACTION and IMPLEMENTATION
+
+//use case : 
+//Assume u work in pizza delivery app and in that it shows multiple restaurants and different kinds of pizza.
+
+//Assume there is Italian and American restaurant each has their own way of preparing pizza 
+//and there are VegPizza and PepperoniPizza 
+
+//it is hard to create classes as ItalianVegPizza, ItalianPepperoniPizza , AmericanVegPizza, AmericanPepperoniPizza
+
+//In this case the variants of a pizza will also grow and the restaurants 
+//also grow, for example in future Mushroom Pizza and Chicken Pizza will be added
+//and Indian and Chinese Restaurants may be added so we want to create combinations of all pizza and restaurants.
+//here the BRIDGE pattern is used.
+
+//Here :
+//Pizza : abstract class for pizza 
+//VegPizza, PepperoniPizza : Concrete class for pizza impl
+
+//Restaurant : abstract class for Restaurant
+//AmericanRestaurant, ItallianRestaurant : concrete class for Restaurant impl
+
 abstract class Pizza {
 
 	protected String sauce;

@@ -1,6 +1,15 @@
 package com.lld.structural_pattern;
 
+
+//use Case: 
+//
+//Assume that we are working in amazon delivery suplies
+//and the there are may boxes which has products and may have a box which may contain box or any other product 
+//
+//and here we want to make the parent box as composite box to make some operation in that
+
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

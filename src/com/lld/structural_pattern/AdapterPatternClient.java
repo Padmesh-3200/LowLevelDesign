@@ -1,14 +1,14 @@
 package com.lld.structural_pattern;
 
 //useCase :
-//you are working in a food delivery app and 
+//Assume you are working in a food delivery app and 
 //where you collect the menu from all the hotels and combine them into single delivery platform.
 //
-//now, your appplication downloads and collects this data 
+//now, your application downloads and collects this data 
 //from multiple sources in XML format and using those for displaying 
 //
-//now you are interested to use the 3rd party lib which supports the ui 
-//customization and there is one check , this third party lib works with the data in Json Format.
+//now you are interested to use the 3rd party lib which supports the ui customisation
+//and there is one check , this third party lib works with the data in Json Format.
 //
 //so U may want to change the library to work with xml but this might break 
 //some existing code that relies on the lib
