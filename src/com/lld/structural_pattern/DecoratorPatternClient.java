@@ -46,6 +46,7 @@ class DataBaseService{
 	
 }
 
+//CONCRETE BASE CLASS
 class NotificationImplementation implements Notification{
 	
 	private final DataBaseService db = new DataBaseService();

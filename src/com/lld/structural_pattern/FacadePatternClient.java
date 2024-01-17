@@ -25,8 +25,34 @@ class DatabaseServiceCrypto {
 }
 
 //container class using record -JAVA 16
-record User(String id, String name, double balance, String currency) {
+class User {
+    private final String id;
+    private final String name;
+    private final double balance;
+    private final String currency;
 
+    public User(String id, String name, double balance, String currency) {
+        this.id = id;
+        this.name = name;
+        this.balance = balance;
+        this.currency = currency;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
 }
 
 abstract class CryptoService {
@@ -82,7 +108,7 @@ class BitcoinService extends CryptoService {
 class MailService {
 
     public void sendConfirmationMail(User user) {
-        System.out.println("Sending mail to " + user.name());
+        System.out.println("Sending mail to " + user.getName());
     }
 
 }
@@ -97,7 +123,7 @@ class BuyCryptoFacade {
 
     	DatabaseServiceCrypto dbService = new DatabaseServiceCrypto();
         User user = dbService.getUser(UIService.getLoggedInUserId());
-        if (user.balance() < amount) {
+        if (user.getBalance() < amount) {
             System.out.println("Insufficient balance to perform transaction");
             return;
         }

@@ -1,6 +1,7 @@
 package com.lld.structural_pattern;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ class BookF {
 }
 
 
-//intrinsix state (same set of value across all object)  -- here mapping key is booktype 
+//intrinsic state (same set of value across all object)  -- here mapping key is booktype 
 class BookTypeF {
 	private final String type;
     private final String distributor;
@@ -97,12 +98,12 @@ public class FlyWeightPatternClient{
 	    }
 
 	    private static String getRandomName() {
-	        List<String> books = List.of("book_1", "book_2", "book_3", "book_4", "book_5", "book_6", "book_7", "book_8", "book_9", "book_10");
+	        List<String> books = Arrays.asList("book_1", "book_2", "book_3", "book_4", "book_5", "book_6", "book_7", "book_8", "book_9", "book_10");
 	        return books.get(new Random().nextInt(books.size()));
 	    }
 
 	    private static double getRandomPrice() {
-	        return new Random().nextDouble(10, 200);
+	        return new Random().nextDouble();
 	    }
 
 }
