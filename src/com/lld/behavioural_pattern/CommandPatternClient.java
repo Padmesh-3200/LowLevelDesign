@@ -1,5 +1,7 @@
 package com.lld.behavioural_pattern;
 
+//The Command pattern turns the request itself into an object. 
+//This object can be stored and passed around like other objects
 
 // interface for command 
 interface Command {
