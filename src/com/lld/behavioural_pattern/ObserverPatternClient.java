@@ -86,7 +86,8 @@ class NotificationService {
 	public NotificationService() {
 		customers = new HashMap<>();
 		Arrays.stream(Event.values()).forEach(event -> customers.put(event, new ArrayList<>())); 
-		// adding the Events as key to categories and store the listneres acording to it
+		// adding the Event type as key to HashMap customers and initializing it with arraylist
+		// to categories and store the listneres acording to it
 	}
 
 	public void subscribe(Event eventType, Listener listener) {
